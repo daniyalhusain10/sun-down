@@ -1,0 +1,433 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    text-transform: capitalize;
+}
+#page1{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2vw 3vw;
+}
+.nav-part2{
+   display: flex;
+   align-items: center;
+   gap: 1vw;
+}
+.nav-part2 h4{
+    padding: 10px 20px;
+    border: 1px solid rgb(145, 145, 145);
+    border-radius: 40px;
+    font-weight: 600;
+    color: rgb(31, 31, 31);
+    font-size: 18px;
+    position: relative;
+    transition: all .30s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+.nav-part2 h4::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all .30s ease;
+    
+}
+.nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+   
+}
+.nav-part2 h4 a{
+    color: black;
+    text-decoration: none;
+    z-index: 9;
+    position: relative;
+}
+.nav-part2 h4:hover a{
+   color: white;
+}
+#center{
+    height: 65vh;
+    width: 100%;
+     display: flex;
+     align-items: flex-end;
+     justify-content: space-between;
+     border-bottom: 1px solid rgb(190, 190, 190);
+}
+#left h3{
+    width: 30vw;
+    font-size: 1.6vw;
+    line-height: 2vw;
+}
+#center h1{
+    font-size: 10vw;
+    line-height: 9vw;
+    text-align: right;
+}
+#page1 video{
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 4vw;
+    position: relative;
+}
+#hero-shape{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 72vh;
+}
+#hero-1{
+    position: absolute;
+    filter: blur(15px);
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color: #FF350B;
+}
+#hero-2{
+    position: absolute;
+    filter: blur(45px);
+    height: 30vw;
+    width: 30vw;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background: linear-gradient(#FF350B,#ff6d0b);
+    border-radius: 50%;
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#hero-3{
+    position: absolute;
+    filter: blur(20px);
+    height: 30vw;
+    width: 30vw;
+   border-radius: 50%;
+    background-color: #FF350B;
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes anime1 {
+    from{
+        transform: translate(40%,0%);
+    }
+    to{
+        transform: translate(50%,0%);
+    }
+    
+}
+@keyframes anime2 {
+    from{
+        transform: translate(50%,-10%);
+       
+    }
+    to{
+        transform: translate(-40%,0%);
+    }
+    
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    padding: 5vw 0vw;
+    background-color: #EFEAE3;
+    position: relative;
+}
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+    
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+#moving-text h1{
+    font-size: 9vw;
+    display: inline-block;
+    
+}
+.con{
+   
+   white-space: nowrap;
+   display: inline-block;
+   animation-name: move;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+#gola{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #FF350B;
+    display: inline-block;
+    margin: 1vw 3vw;
+}
+@keyframes move {
+    from {
+        transform: translate(0);
+
+    }
+    to{
+        transform: translate(-100%);
+    }
+    
+}
+#page2-bottom{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.5vw;
+    position: relative;
+    z-index: 9;
+
+}
+#page2-bottom h1{
+ font-size: 3.7vw;
+ width: 67%;
+ 
+}
+#bottom-part2{
+    width: 20%;
+    position: relative;
+    margin-top: 100px;
+}
+#bottom-part2 img{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 10px 10px grey;
+}
+#bottom-part2 p{
+    width: 106%;
+    margin-top: 2vw;
+    font-weight: 500;
+    font-size: 1vw;
+}
+#page2 #gooey{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right,#FF350B,#fa5c00);
+    top: 58%;
+    left: 25%;
+    filter: blur(20px);
+    animation-timing-function: ease-in-out;
+    animation-name: gooey;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes gooey{
+    from{
+        transform: translate(10%,-10%)skew(0);
+       
+    }
+    to{
+        transform: translate(-10%,10%)skew(-12deg);
+        
+    }
+}
+#featured{
+    width: 100%;
+    height: 100%;
+    padding: 1vw 3vw;
+    position: relative;
+    z-index: -9;
+    background-color: #EFEAE3;
+}
+#fear h5{
+    margin-top: px;
+    margin-left: 5px;
+    display: inline-block;
+}
+#fear{
+    display: flex;
+    
+}
+#fear img{
+    display: inline-block;
+    margin-top: 3px;
+    width: 10px;
+    height: 10px;
+}
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+.elem{
+    height: 100px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+    display: flex;
+    align-items: center;
+    padding: 0 3vw;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+.elem h2{
+    font-size: 3vw;
+    z-index: 9;
+}
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #FF9831;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all .30s ease;
+    z-index: 1;
+}
+.elem-end{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+}
+.elem:hover .overlay{
+   top: 0;
+}
+#fixed-image{
+    height: 30vw;
+    width: 26vw;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 20%;
+    border-radius: 20px;
+    display: none;
+    background-repeat: no-repeat;
+    box-shadow: 0px 10px 10px grey;
+}
+#page4{
+    height: 50vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+#main{
+    z-index: 10;
+    position: relative;
+}
+#page5{
+    height: 120vh;
+    width: 100%;
+}
+#footer{
+    position: fixed;
+    height: 120vh;
+    width: 100%;
+    z-index: 9;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    align-items: flex-end;
+
+}
+#footer h1{
+    margin-top: 0vw;
+    font-size: 20vw;
+    bottom: 34vw;
+    position: relative;
+
+}
+
+#footer-div{
+    margin-top: 10vw;
+    height: 100%;
+    width: 100%;
+    border-radius: 20%;
+    filter: blur(20px);
+    position: relative;
+    background-color: #FE330A;
+    animation-name: botto;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes botto{
+    from{
+        transform: translate(10%,-10%)skew(0);
+       
+    }
+    to{
+        transform: translate(-10%,10%)skew(90deg);
+        
+    }
+}
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    transition: all 0.4s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loader h1{
+    color: transparent;
+    font-size: 4vw;
+    background: linear-gradient(to right,orange,#FE330A);
+    background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+@keyframes load{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
